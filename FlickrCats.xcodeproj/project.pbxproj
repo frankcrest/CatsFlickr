@@ -13,6 +13,8 @@
 		E90614C4228DCBD4002BB9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90614C3228DCBD4002BB9AE /* Assets.xcassets */; };
 		E90614C7228DCBD4002BB9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90614C5228DCBD4002BB9AE /* LaunchScreen.storyboard */; };
 		E90614CA228DCBD4002BB9AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E90614C9228DCBD4002BB9AE /* main.m */; };
+		E90614D2228E022B002BB9AE /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90614D1228E022A002BB9AE /* Photo.m */; };
+		E9582350228E06B1007AF6C1 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E958234F228E06B1007AF6C1 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E90614C6228DCBD4002BB9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E90614C8228DCBD4002BB9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E90614C9228DCBD4002BB9AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E90614D0228E022A002BB9AE /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		E90614D1228E022A002BB9AE /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		E958234E228E06B1007AF6C1 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		E958234F228E06B1007AF6C1 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				E90614BB228DCBD3002BB9AE /* AppDelegate.m */,
 				E90614BD228DCBD3002BB9AE /* ViewController.h */,
 				E90614BE228DCBD3002BB9AE /* ViewController.m */,
+				E958234E228E06B1007AF6C1 /* CustomCollectionViewCell.h */,
+				E958234F228E06B1007AF6C1 /* CustomCollectionViewCell.m */,
+				E90614D0228E022A002BB9AE /* Photo.h */,
+				E90614D1228E022A002BB9AE /* Photo.m */,
 				E90614C0228DCBD3002BB9AE /* Main.storyboard */,
 				E90614C3228DCBD4002BB9AE /* Assets.xcassets */,
 				E90614C5228DCBD4002BB9AE /* LaunchScreen.storyboard */,
@@ -141,9 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90614D2228E022B002BB9AE /* Photo.m in Sources */,
 				E90614BF228DCBD3002BB9AE /* ViewController.m in Sources */,
 				E90614CA228DCBD4002BB9AE /* main.m in Sources */,
 				E90614BC228DCBD3002BB9AE /* AppDelegate.m in Sources */,
+				E9582350228E06B1007AF6C1 /* CustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
