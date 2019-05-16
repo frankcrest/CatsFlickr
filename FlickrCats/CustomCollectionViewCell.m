@@ -42,26 +42,30 @@
 
 -(void)loadImageFromWeb:(NSURL*)url{
     
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 2
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration]; // 3
-    
-    NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    if (self.imageView.image == nil) {
         
-        if (error) {
-            NSLog(@"error: %@", error.localizedDescription);
-            return;
-        }
+        NSLog(@"downlading");
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 2
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration]; // 3
         
-        NSData* data = [NSData dataWithContentsOfURL:location];
-        UIImage* image = [UIImage imageWithData:data];
+        NSURLSessionDownloadTask *downloadTask = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            
+            if (error) {
+                NSLog(@"error: %@", error.localizedDescription);
+                return;
+            }
+            
+            NSData* data = [NSData dataWithContentsOfURL:location];
+            UIImage* image = [UIImage imageWithData:data];
+            
+            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+                self.imageView.image = image;
+            }];
+            
+        }]; // 4
         
-        [[NSOperationQueue mainQueue]addOperationWithBlock:^{
-            self.imageView.image = image;
-        }];
-        
-    }]; // 4
-    
-    [downloadTask resume]; // 5
+        [downloadTask resume]; // 5
+    }
 }
 
 @end
