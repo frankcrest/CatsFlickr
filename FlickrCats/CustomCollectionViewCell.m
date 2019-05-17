@@ -14,7 +14,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor cyanColor];
+        self.alpha = 0.1;
         _label = [[UILabel alloc]initWithFrame:CGRectZero];
         _label.translatesAutoresizingMaskIntoConstraints = 0;
         _label.textColor = [UIColor blackColor];
@@ -43,8 +44,6 @@
 -(void)loadImageFromWeb:(NSURL*)url{
     
     if (self.imageView.image == nil) {
-        
-        NSLog(@"downlading");
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration]; // 2
         NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration]; // 3
         
